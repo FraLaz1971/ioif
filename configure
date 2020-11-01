@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+chmod +x *.sh
 if   [[ "$OS" == "WindowsNT" ]]
 then
 	echo "detected Microsoft $OS $(uname)"
