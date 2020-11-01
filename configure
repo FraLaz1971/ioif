@@ -8,11 +8,11 @@ then
 	echo "detected GNU/linux $OS"
 	uname -a
 	lsb_release -a
-	./configure.sh > Makefile.mac
+	./configure.sh > Makefile
 elif [[ $(uname) == "Darwin" ]]
 then
 	echo "detected Apple $OS $(uname)"
-	./configure-mac.sh > Makefile
+	./configure-mac.sh > Makefile.mac
 else
 	echo "unknow OS"
 fi
