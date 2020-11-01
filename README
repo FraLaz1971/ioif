@@ -1,0 +1,31 @@
+#to compile all on linux or MSwin+msys+mingw
+./configure
+make
+#to compile all on MSwin+msys+mingw
+./configure
+make
+make -f Makefile.mingw
+#to run insults c exe on linux
+./insults
+#to run insults c exe on ms win cmd
+.\insults.exe
+#to run insults c exe on ms win msys2/mingw
+./insults.exe
+#to run insults c exe on linux
+./integers
+#to run insults c exe on ms win cmd
+.\integer.exe
+#to run insults c exe on ms win msys2/mingw
+./integers.exe
+#to run insults.sh bash script
+bash insults.sh
+#to run integers.sh bash script
+bash integers.sh
+#to run integers.py python script
+python integers.py
+#to run insults.py python script
+python insults.py
+
+
+
+
