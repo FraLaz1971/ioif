@@ -3,7 +3,6 @@
 make
 #to compile all on MSwin+msys+mingw
 ./configure
-make
 make -f Makefile.mingw
 #to run insults c exe on linux
 ./insults
