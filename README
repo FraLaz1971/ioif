@@ -20,11 +20,18 @@ make -f Makefile.mingw
 bash insults.sh
 #to run integers.sh bash script
 bash integers.sh
+#to run python programs modify 
+#the actual command to the use
+#of python3 or python2
 #to run integers.py python script
-python integers.py
 #to run insults.py python script
 python insults.py
-
+#
+insults-python2.py
+#
+integers-python3.py
+#
+python integers.py
 
 
 
