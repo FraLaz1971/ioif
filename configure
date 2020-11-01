@@ -18,7 +18,7 @@ else
 	echo "unknow OS"
 fi
 echo "generated Makefile"
-ls -lhrt Makefile
+ls -lhrt Makefile*
 echo "you can now run:"
 echo "make"
 echo "to see all generate files type:"
