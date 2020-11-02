@@ -1,4 +1,4 @@
-#to compile all on linux or MSwin+msys+mingw
+#to compile all on linux
 ./configure
 make
 #to compile all on MSwin+msys+mingw
