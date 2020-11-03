@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/env/bin bash
 echo "this bash program make insults to people who deserve"
 date
 echo "what is his name?"
