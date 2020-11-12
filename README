@@ -1,9 +1,9 @@
 #to compile all on linux
 ./configure
-make
+make -f Makefile.lnx
 #to compile all on MSwin+msys+mingw
 ./configure
-make -f Makefile.mingw
+mingw32-make -f Makefile.mingw
 #to run insults c exe on linux
 cd src
 ./insults
