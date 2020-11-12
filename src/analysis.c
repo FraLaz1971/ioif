@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "fun/functions.h"
+/* #include "fun/functions.h" */
 
 int main(int argc, char **argv)
 {
     if (argc == 4){
-    nrows=atoi(argv[2]); ncols=(atoi(argv[3]));
+	puts("Hello Analysis");
+/*
+    nrows=atoi(argv[2]); ncols=(atoi(argv[3])); */
     	/* allocate a mybuffer of chars with length bufsize */
+/*
     memcpy(infile, argv[1], strlen(argv[1]));
 
     open_data_file(infile);
@@ -22,7 +25,7 @@ int main(int argc, char **argv)
     deallocate_buffer();
 
     deallocate_data();
-
+*/
     return 0;
  
     } else {

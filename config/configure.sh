@@ -1,7 +1,8 @@
 #/usr/bin/env bash
 echo "generating total makefile for $(uname) $OS ..." >/dev/stderr
-a=0;t=0;TARGETS="";RMTARGETS=""
+a=0;t=0;TARGETS="";RMTARGETS=""; EEXT=".exe";OEXT=".o"
 echo 'CC=gcc -g -O2'
+echo 'MAKE = make'
 echo 'SRC = $(wildcard src/*.c)'
 echo "OBJ = src/*.o"
 echo 'CPPFLAGS = -Iinclude -Isrc -I/src/fun'
@@ -17,8 +18,13 @@ do
 done
 echo 'TARGETS' = $TARGETS
 echo 'RMTARGETS' = $RMTARGETS
+echo 'all: libfun $(TARGETS)'
+echo '#creating libfun'
 echo 'all: $(TARGETS)'
-echo
+echo 'libfun: src/fun/functions.o'
+echo -e "\t"'cd src/fun && $(MAKE)'
+echo 'cleanlibfun: src/fun/functions.o'
+echo -e "\t"'cd src/fun && $(MAKE) clean'
 a=0
 for s in $(ls -1 src/*.c)
 do
