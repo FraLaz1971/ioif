@@ -5,33 +5,40 @@ make
 ./configure
 make -f Makefile.mingw
 #to run insults c exe on linux
+cd src
 ./insults
 #to run insults c exe on ms win cmd
+cd src
 .\insults.exe
 #to run insults c exe on ms win msys2/mingw
+cd src
 ./insults.exe
 #to run insults c exe on linux
+cd src
 ./integers
 #to run insults c exe on ms win cmd
+cd src
 .\integer.exe
 #to run insults c exe on ms win msys2/mingw
+cd src
 ./integers.exe
 #to run insults.sh bash script
+cd script/bash
 bash insults.sh
 #to run integers.sh bash script
+cd script/bash
 bash integers.sh
 #to run python programs modify 
 #the actual command to the use
 #of python3 or python2
 #to run integers.py python script
 #to run insults.py python script
+cd script/python
 python insults.py
 #
-insults-python2.py
+python2 insults-python2.py
 #
-integers-python3.py
+python3 integers-python3.py
 #
 python integers.py
-
-
 
