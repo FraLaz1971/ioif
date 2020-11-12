@@ -2,12 +2,12 @@
 if   [[ "$OS" == "Windows_NT" ]]
 then
 	echo "detected Microsoft $OS $(uname)"
-	config/configure-win-mingw.sh > Makefile.mingw
+	. config/configure-win-mingw.sh > Makefile.mingw
 	arch=$(uname -m)
 	if [[ $arch == i686 ]]
 	then
 		echo 'ex. config/configure-win-i686-mingw.sh > Makefile.mingw32'
-		config/configure-win-i686-mingw.sh > Makefile.mingw32
+		. config/configure-win-i686-mingw.sh > Makefile.mingw32
 	elif [[ $arch == x86_64 ]]
 	then
 		echo 'ex. config/configure-win-i686-mingw.sh > Makefile.mingw64'
@@ -19,11 +19,11 @@ then
 	echo "detected GNU/linux $OS"
 	uname -a
 	lsb_release -a
-	config/configure.sh > Makefile.lnx
+	. config/configure.sh > Makefile.lnx
 elif [[ $(uname) == "Darwin" ]]
 then
 	echo "detected Apple $OS $(uname)"
-	config/configure-mac.sh > Makefile.mac
+	. config/configure-mac.sh > Makefile.mac
 else
 	echo "unknow OS"
 fi

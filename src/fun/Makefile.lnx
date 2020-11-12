@@ -4,7 +4,7 @@ OEXT = .o
 EEXT =
 SLEXT = .a
 AR = ar rcs
-TARGET=analysis
+TARGET=testlibfun
 
 all: libfun$(SLEXT) $(TARGET)$(EEXT)
 

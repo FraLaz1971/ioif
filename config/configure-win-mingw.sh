@@ -46,8 +46,8 @@ done
 echo 'echo created all targets' >/dev/stderr
 echo 'install: all'
 echo -e '\tmv $(TARGETS) bin'
-echo '.PHONY: clean distclean'
-echo 'clean:'
+echo '.PHONY: clean distclean cleanlibfun'
+echo 'clean: cleanlibfun'
 echo -e "\t"'rm -f $(OBJ) $(RMTARGETS)'
 echo 'distclean: clean'
 echo -e "\trm -f bin/* Makefile* *.fit *.fits *.csv *.ssv *.tsv *.dat *.txt *.log"
