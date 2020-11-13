@@ -18,7 +18,7 @@ test:
 functions$(OEXT): functions.c
 	$(CC) -c functions.c
 
-libfun$(SLEXT): functions$(OEXT)
+libfun$(SLEXT): functions$(OEXT) plot$(OEXT)
 	$(AR) libfun.a functions$(OEXT)
 
 clean:

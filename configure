@@ -29,6 +29,7 @@ else
 fi
 echo "generated Makefile"
 ls -lhrt Makefile*
+cp src/fun/Makefile.lnx src/fun/Makefile
 echo "if you're on GNU/Linux or Mac you can now run:"
 echo "make -f Makefile.lnx"
 echo "if you're on MS win you can now run:"

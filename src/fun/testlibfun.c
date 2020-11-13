@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
+#include "plot.h"
 
 int main(int argc, char **argv)
 {
@@ -16,15 +17,15 @@ int main(int argc, char **argv)
     allocate_data();
 
     parse_data_file();
-
-    showdata(data, nrows, ncols);
+    create_data_file("temp3.tsv");
+/*    showdata(data, nrows, ncols); */
 
     deallocate_buffer();
 
     deallocate_data();
 
     return 0;
- 
+
     } else {
     printf("usage: %s infilename nrows ncolumns\n", argv[0]);
 	return 1;
