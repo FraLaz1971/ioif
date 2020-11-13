@@ -18,6 +18,8 @@ int main(int argc, char **argv)
 
     parse_data_file();
     create_data_file("fixed.tsv");
+
+    create_gp_cmd_file("fixed.gp");
 /*    showdata(data, nrows, ncols); */
 
     deallocate_buffer();

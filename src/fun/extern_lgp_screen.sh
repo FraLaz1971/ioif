@@ -3,7 +3,7 @@
 echo "executing extern gnuplot launch $0 $@"
 echo "extern_lgp_screen.sh: creating temp. files"
 ./testlibfun table.csv 1 1
-ls *.gp *tsv
+ls -alhrt *.gp *tsv
 echo "executing extern gnuplot launch $0 $@"
 
 gnuplot << EOF

@@ -20,8 +20,9 @@ static char es[MDIM] = "";
 static char buff[MDIM] = "";
 static char * datafile = "data.tsv";
 static char * gpfile = "cmds.gp";
-int ch, i, ret, a;
-unsigned int a1d[MDIM];  
+int ch, i, ret, step;
+float a;
+unsigned int a1d[MDIM];
 
 
 int create_data_file(char *ofname);
@@ -34,7 +35,7 @@ int create_gp_cmd_file(char *gp_cmds_fn);
 /* launch gnuplot cmd withn gp_cmds_ifn as gnuplot command file */
 int gp_plot_screen(char * gp_cmds_ifn);
 
-/* launch gnuplot cmd withn gp_cmds_ifn as gnuplot command file 
+/* launch gnuplot cmd withn gp_cmds_ifn as gnuplot command file
  and save plot to png file */
 int gp_plot_png(char * gp_cmds_ifn);
 

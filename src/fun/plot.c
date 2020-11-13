@@ -1,5 +1,6 @@
 /* functions to plot science data using gnuplot */
 #include <string.h>
+#include <math.h>
 #include "plot.h"
 /* create the file containing 2D points to be plotted
 saving it on an ascii text file, takes in input
@@ -8,14 +9,14 @@ numbers separated by tabs */
 
 int create_data_file(char *ofname){
          /* open output file for writing */
-     char temp[255];
-     strcpy(temp, ofname);
+     char tempfname[255];
+     strcpy(tempfname, ofname);
 #ifdef DEBUG
      fprintf(stderr, "create_data_file(): start! ");
      fprintf(stderr, "create_data_file(): going to open file %s \n", temp);
 #endif
-     strcat(es, ": Can't open file "); strcat(es, temp); strcat(es, " for writing \n");
-     ofptr = fopen(temp,"w");
+     strcat(es, ": Can't open file "); strcat(es, tempfname); strcat(es, " for writing \n");
+     ofptr = fopen(tempfname,"w");
      if ( ofptr == NULL  )  /* if can't open outfile receive an herror on opening file */
      {
        printf("Error OPENING FILE: err msg = %s\n", strerror(errno));
@@ -31,18 +32,17 @@ int create_data_file(char *ofname){
 #endif
     /* process input data */
 /*     while ( ( ch = fgetc(ifptr)) != EOF ) */ /* until you don't get the end of input file */
-     fprintf(ofptr, "%s\n", "#ascii 2D points test.tsv");
-     a=1;
-     while ( a < 11 )
+     fprintf(ofptr, "%s\n", "#ascii 2D points %s", tempfname);
+     step = 1;
+     for ( a=-1000; a < 1000; a = a + step )
      {
 /*       fputc(ch,ofptr);  */ /* write the file content on outfile */
-        fprintf(ofptr, "  %i\t%i\n", a, a*a);
+        fprintf(ofptr, "  %.6f\t%.6f\n", a, a*a*a );
        if(ferror(ofptr))
        {
          printf("File Error writing rows ..!!\n");
          fprintf(stderr,"fopen() failed in source file %s at line # %d\n", __FILE__,__LINE__);
        }
-       a++;
      }
         fprintf(ofptr, "  %s\n", "e");
 }
@@ -76,19 +76,7 @@ int create_gp_cmd_file(char *gp_cmds_fn){
         fprintf(ofptr, "%s\n", "set xlabel 'time (s)'");
         fprintf(ofptr, "%s\n", "set ylabel 'counts (#)'");
         fprintf(ofptr, "%s\n", "set title 'My Awesome Plot'");
-        fprintf(ofptr, "%s\n", "plot 'temp.tsv' using 1:2");
-//      a=1;
-//      while ( a < 11 )
-//      {
-//         fprintf(ofptr, "  %i\t%i\n", a, a*a);
-//        if(ferror(ofptr))
-//        {
-//          printf("File Error writing rows ..!!\n");
-//          fprintf(stderr,"fopen() failed in source file %s at line # %d\n", __FILE__,__LINE__);
-//        }
-//        a++;
-//      }
-//         fprintf(ofptr, "  %s\n", "e");
+        fprintf(ofptr, "%s\n", "plot 'fixed.tsv' using 1:2");
 
 }
 
