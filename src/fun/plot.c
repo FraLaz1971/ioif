@@ -1,4 +1,5 @@
 /* functions to plot science data using gnuplot */
+
 #include <string.h>
 #include <math.h>
 #include "plot.h"
@@ -32,7 +33,8 @@ int create_data_file(char *ofname){
 #endif
     /* process input data */
 /*     while ( ( ch = fgetc(ifptr)) != EOF ) */ /* until you don't get the end of input file */
-     fprintf(ofptr, "%s\n", "#ascii 2D points %s", tempfname);
+     fprintf(ofptr, "%s %s\n", "#ascii 2D points, file ", tempfname);
+     fprintf(ofptr, "%s\n", "# time(s)\tcounts(#)");
      step = 1;
      for ( a=-1000; a < 1000; a = a + step )
      {
@@ -71,7 +73,6 @@ int create_gp_cmd_file(char *gp_cmds_fn){
 /*     while ( ( ch = fgetc(ifptr)) != EOF ) */ /* until you don't get the end of input file */
         fprintf(ofptr, "%s\n", "#!/usr/bin/env gnuplot");
         fprintf(ofptr, "%s\n", "# gnuplot commandfile created by fralaz1971@gmail.com");
-        fprintf(ofptr, "%s\n", "# time(s)\tcounts(#)");
         fprintf(ofptr, "%s\n", "set terminal qt persist");
         fprintf(ofptr, "%s\n", "set xlabel 'time (s)'");
         fprintf(ofptr, "%s\n", "set ylabel 'counts (#)'");

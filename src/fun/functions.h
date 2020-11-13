@@ -1,3 +1,6 @@
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -5,12 +8,13 @@
 #define LMAXSIZE 3 /* max allowed line length */
 #define FSIZE 16     /* max allowed number of characters in a field (cell) include '\0' */
 #define FMAX 16      /* max allowed number of fields (columns) in a row */
-#define RMAX 16      /* max allowed number of records (rows) in a file */
+#define RMAX 65536      /* max allowed number of records (rows) in a file */
 #define RS '\n'     /* record (row) separator */
 #define FS ','     /* record (row) separator */
 FILE *ptr;  /* Pointer to the data file. FILE is a structure defined in <stdio.h> */
 FILE *mptr; /* Pointer to the metadata file. FILE is a structure defined in <stdio.h> */
-
+double t; /* temp variable to assign values to data arrays*/
+int a; /* array counter */
 int c; /* Character read from the file. */
 int rowcount;  /* rowcount: lines counter */
 int cc;  /* cc: chars counter */
@@ -50,3 +54,4 @@ void allocate_buffer();
 void allocate_data();
 void deallocate_buffer();
 void deallocate_data();
+#endif

@@ -36,6 +36,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="src/fun/data.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="src/fun/data.h" />
 		<Unit filename="src/fun/exits.h" />
 		<Unit filename="src/fun/functions.c">
 			<Option compilerVar="CC" />
