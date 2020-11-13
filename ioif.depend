@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1605255177 source:/home/francesco/projects/ioif/src/fun/functions.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1605255177 /home/francesco/projects/ioif/src/fun/functions.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"exits.h"
+
+1605255177 /home/francesco/projects/ioif/src/fun/exits.h
+
+1605269466 source:/home/francesco/projects/ioif/src/fun/testlibfun.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+	"plot.h"
+
+1605269834 /home/francesco/projects/ioif/src/fun/plot.h
+	<errno.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1605272430 source:/home/francesco/projects/ioif/src/fun/plot.c
+	<string.h>
+	"plot.h"
+
