@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     allocate_data();
 
     parse_data_file();
-    create_data_file("temp3.tsv");
+    create_data_file("fixed.tsv");
 /*    showdata(data, nrows, ncols); */
 
     deallocate_buffer();

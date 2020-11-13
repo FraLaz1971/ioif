@@ -11,5 +11,5 @@ set terminal qt persist
 set xlabel 'time (s)'
 set ylabel 'counts #'
 set title 'My Awesome Plot'
-plot 'temp.tsv' using 1:2
+plot 'fixed.tsv' using 1:2
 EOF
